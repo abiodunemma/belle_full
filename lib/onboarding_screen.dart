@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'onboarding_model.dart';
+import 'login_page..dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -20,13 +21,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     ),
     OnboardingModel(
       image: 'assets/images/onbaording2.png',
-      title: 'Easy Navigation',
-      description: 'Navigate through our app with ease.',
+      title: 'All your favorites',
+      description: 'Order from the best local restaurants with easy, on-demand delivery.',
     ),
     OnboardingModel(
       image: 'assets/images/onbaording3.png',
-      title: 'Get Started',
-      description: 'Start your journey with us today.',
+      title: 'Free delivery offers',
+      description: 'Free delivery for new customers via Apple Pay and others payment methods.',
     ),
   ];
   @override
@@ -128,7 +129,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   child: SizedBox(
     width: double.infinity,
     child: ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => LoginPage()),
+  );
+},
+
       style: ElevatedButton.styleFrom(
         backgroundColor: Color(0xffEEA734),
         padding: const EdgeInsets.symmetric(vertical: 16),
