@@ -18,7 +18,11 @@ Feature 3: Push notifications
 
 
 Home Screen
-Tip: Use relative paths to your assets/images folder so it works on GitHub.
+
+![Food App Screenshot](lib/assets/images/food1.png)
+![Food App Screenshot](lib/assets/images/food2.png)
+![Food App Screenshot](lib/assets/images/food3.png)
+
 
 Installation
 Prerequisites
@@ -27,8 +31,8 @@ Dart ≥ 3.0
 Android Studio / Xcode (for mobile emulators)
 
 
-git clone https://github.com/yourusername/your-app.git
-cd your-app
+git clone https://github.com/yourusername/belle_full.git
+cd belle_full
 
 Usage
 Open the app
@@ -40,4 +44,3 @@ Technologies
 Flutter & Dart
 Firebase (optional, if used)
 Cloudinary / AWS / Google Cloud (for media & backend integration)
-Any other libraries/plugins used
