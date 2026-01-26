@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'reset_password.dart';
 
 
 class ForgetPassword extends StatelessWidget {
@@ -81,7 +82,10 @@ class ForgetPassword extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                   
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ResetPassword()),
+                      );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor:  const Color(0xffEEA734),
