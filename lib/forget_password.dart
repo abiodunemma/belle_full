@@ -9,35 +9,60 @@ class ForgetPassword extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(24),
-          child: SizedBox(
-            height: 56,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                // Back arrow (left)
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(Icons.arrow_back),
-                  ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Top header
+              SizedBox(
+                height: 56,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(Icons.arrow_back),
+                      ),
+                    ),
+                    const Text(
+                      "Forget Password",
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
+              ),
 
-                // Title (center)
-                const Text(
-                  "Forget Password",
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w600,
-                  ),
+              const SizedBox(height: 24),
+
+              // Page content title / subtitle
+              const Text(
+                "Forgot password",
+                style: TextStyle(
+                  fontSize: 25,
+                  
                 ),
-              ],
-              
-            ),
+              ),
+
+              const SizedBox(height: 10),
+
+              const Text(
+                "Enter your email address below to receive a password reset link.",
+                style :TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                )
+              ),
+
+              const SizedBox(height: 40),
+
+            ],
           ),
-          
         ),
       ),
     );
