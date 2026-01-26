@@ -30,7 +30,7 @@ class ForgetPassword extends StatelessWidget {
                       ),
                     ),
                     const Text(
-                      "Forget Password",
+                      "Forgot Password",
                       style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.w600,
