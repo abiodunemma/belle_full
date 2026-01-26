@@ -72,11 +72,11 @@ class LoginPage extends StatelessWidget {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: ()  {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => ForgetPassword()),
-  );
-},
+                     Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ForgetPassword()),
+                      );
+                       },
                       child: const Text("Forgot Password?"),
                     ),
                   ),

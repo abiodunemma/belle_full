@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
 
@@ -61,6 +62,45 @@ class ForgetPassword extends StatelessWidget {
 
               const SizedBox(height: 40),
 
+               TextField(
+               decoration: InputDecoration(
+               hintText: "Email",
+               prefixIcon: const Icon(Icons.email),
+                enabledBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.grey),
+               ),
+                focusedBorder: const UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.blue, width: 2),
+               ),
+               ),
+              ),
+
+              const SizedBox(height: 20), 
+
+                SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                   
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor:  const Color(0xffEEA734),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                  ),
+                  
+                  child: const Text(
+                    "RESET PASSWORD",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    )
+                    ),
+                ),
+              ),
             ],
           ),
         ),
