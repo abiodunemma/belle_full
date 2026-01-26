@@ -19,6 +19,15 @@ Feature 3: Push notifications
 
 Home Screen
 
+
+## Screenshots
+
+<p align="center">
+  <img src="lib/assets/images/food1.png" width="320" alt="Onboarding Screen">
+</p>
+
+_Onboarding screen of the mobile app_
+
 ![Food App Screenshot](lib/assets/images/food1.png)
 ![Food App Screenshot](lib/assets/images/food2.png)
 ![Food App Screenshot](lib/assets/images/food3.png)
