@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'reset_password.dart';
+import 'login_password.dart';
 
 
 class ForgetPassword extends StatelessWidget {
@@ -84,7 +85,7 @@ class ForgetPassword extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ResetPassword()),
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
                       );
                   },
                   style: ElevatedButton.styleFrom(
