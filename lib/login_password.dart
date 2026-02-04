@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'otp_password.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -106,7 +107,12 @@ class LoginScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: (){
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => OTPScreen()),
+  );
+},
                   style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xffEEA734),
                         padding: const EdgeInsets.symmetric(vertical: 16),
