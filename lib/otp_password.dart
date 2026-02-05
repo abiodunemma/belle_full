@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'address.dart';
 
 
 
@@ -90,8 +91,12 @@ class OTPScreen extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {                     
-                        },
+                        onPressed: () {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => AddressScreen()),
+  );
+},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xffEEA734),
                           padding: const EdgeInsets.symmetric(vertical: 16),
