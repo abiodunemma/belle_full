@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'address.dart';
+import 'dart:developer';
 
 
 
@@ -83,7 +84,7 @@ class OTPScreen extends StatelessWidget {
       onChanged: (value) {},
 
       onCompleted: (value) {
-        print("OTP Entered: $value");
+        log("OTP Entered: $value");
       },
     ),
                     const SizedBox(height: 30),

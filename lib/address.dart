@@ -103,9 +103,9 @@ class _AddressScreenState extends State<AddressScreen> {
                   child: OutlinedButton(
                     onPressed: () {
                       Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => HomeScreen()),
-  );
+                        context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                      );
                     },
 
                     style: OutlinedButton.styleFrom(
