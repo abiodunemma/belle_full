@@ -61,6 +61,7 @@ class OTPScreen extends StatelessWidget {
   ),
 ),
 
+    const SizedBox(height: 30),
 
     PinCodeTextField(
       appContext: context,
