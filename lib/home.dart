@@ -83,13 +83,58 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                   child: Image.asset(
                     "assets/images/plain.png",
-                      // "assets/images/onbaording1.png",
                     width: double.infinity,
                     height: 200,
                     fit: BoxFit.cover,
                   ),
                 )
               ),
+
+              const SizedBox(height: 20),
+               
+               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    "Featured Partners",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "see all",
+                    style: TextStyle(
+                      fontSize: 16,
+                    color: Color(0xffEEA734),
+                    ),
+                  ),
+                ],
+               ),
+               const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        "assets/images/plate1.png",
+                        width: 150,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Image.asset(
+                        "assets/images/plate2.png",
+                        width: 150,
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                ]
+                )
             ],
         ),
       ),
