@@ -59,15 +59,40 @@ class HomeScreen extends StatelessWidget {
                     child: const Text(
                       "Filter",
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 16,
                       ),
                     ),
                   ),
+
                 ],
               ),
+              Column(
+                children: [
+                  const SizedBox(height: 10),
+                  const Divider(
+                    color: Colors.grey,
+                    thickness: 1,
+                  ),
+                  const SizedBox(height: 16),
+                ],
+              ),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child:ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(
+                    "assets/images/plain.png",
+                      // "assets/images/onbaording1.png",
+                    width: double.infinity,
+                    height: 200,
+                    fit: BoxFit.cover,
+                  ),
+                )
+              ),
             ],
-          ),
         ),
+      ),
       ),
     );
   }
