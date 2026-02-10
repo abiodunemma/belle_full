@@ -262,38 +262,27 @@ class HomeScreen extends StatelessWidget {
     ),
   ),
  ),
- SizedBox(height: 10),
-  Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-   Column(
-     crossAxisAlignment: CrossAxisAlignment.start,
-     children: [
-       const Text(
-         "Best Picks",
-         style: TextStyle(
-           fontSize: 18,
-           fontWeight: FontWeight.bold,
-         ),
-       ),
-       const SizedBox(height: 4),
-       const Text(
-         "Results by team",
-         style: TextStyle(
-           fontSize: 18,
-          fontWeight: FontWeight.bold,
-         ),
-       ),
-     ],
-   )
-            ]
-    ),
-    // const SizedBox(height: 10),
+
+
+
+SizedBox(height: 10),
+
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: [
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text (
-          "see all ",
+        const Text(
+          "Best Picks",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 4),
+        const Text(
+          "Results by team",
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.bold,
@@ -301,6 +290,21 @@ class HomeScreen extends StatelessWidget {
         ),
       ],
     ),
+    // Move the "see all" Column inside the Row's children list
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          "see all",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+  ],
+),
 
 
     
