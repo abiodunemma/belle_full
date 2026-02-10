@@ -7,6 +7,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+         child: SingleChildScrollView(  
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -115,7 +116,6 @@ class HomeScreen extends StatelessWidget {
                 Row(
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
   children: [
-    // First Kitchen Card
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -182,7 +182,7 @@ class HomeScreen extends StatelessWidget {
       ],
     ),
     
-    // Second Kitchen Card
+   
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -197,7 +197,7 @@ class HomeScreen extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         const Text(
-          "Kitchen Name 2",
+          "Mario Italiano",
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
@@ -249,11 +249,66 @@ class HomeScreen extends StatelessWidget {
       ],
     ),
   ],
-)
+),
+ const SizedBox(height: 20),
+
+ Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+  child:ClipRRect(
+    borderRadius: BorderRadius.circular(16),
+    child: Image.asset(
+      "assets/images/Banner.png",
+      width: double.infinity,
+    ),
+  ),
+ ),
+ SizedBox(height: 10),
+  Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+   Column(
+     crossAxisAlignment: CrossAxisAlignment.start,
+     children: [
+       const Text(
+         "Best Picks",
+         style: TextStyle(
+           fontSize: 18,
+           fontWeight: FontWeight.bold,
+         ),
+       ),
+       const SizedBox(height: 4),
+       const Text(
+         "Results by team",
+         style: TextStyle(
+           fontSize: 18,
+          fontWeight: FontWeight.bold,
+         ),
+       ),
+     ],
+   )
+            ]
+    ),
+    // const SizedBox(height: 10),
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text (
+          "see all ",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+
+
+    
             ],
         ),
       ),
       ),
+      )
     );
   }
 }
