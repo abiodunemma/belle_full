@@ -112,7 +112,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
                ),
+
+
                const SizedBox(height: 10),
+
                 Row(
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
   children: [
@@ -298,7 +301,7 @@ Row(
           "see all",
           style: TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            color: Color(0xffEEA734),
           ),
         ),
       ],
@@ -306,7 +309,183 @@ Row(
   ],
 ),
 
+const SizedBox(height: 10),
 
+
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: [
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset(
+            "assets/images/pen.png",
+            width: 150,
+            height: 100,
+            fit: BoxFit.cover,
+          ),
+        ),
+        const SizedBox(height: 8),
+        const Text(
+          "McDonald’s",
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        ),
+        const SizedBox(height: 4),
+        const Text(
+          "Hay street , Perth City",
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.grey,
+          ),
+        ),
+        const SizedBox(height: 6),
+        Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: Color(0xffEEA734),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: const Text(
+                "4.7",
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(width: 6),
+            const Text(
+              "25 min",
+              style: TextStyle(fontSize: 12),
+            ),
+            const SizedBox(width: 4),
+            const Text(
+              "•",
+              style: TextStyle(fontSize: 12),
+            ),
+            const SizedBox(width: 4),
+            const Text(
+              "Free delivery",
+              style: TextStyle(fontSize: 12),
+            ),
+          ],
+        ),
+      ],
+    ),
+
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.asset(
+            "assets/images/bread.png",
+            width: 150,
+            height: 100,
+            fit: BoxFit.cover,
+          ),
+        ),
+        const SizedBox(height: 8),
+        const Text(
+          "Sushi Place",
+          style: TextStyle(
+            fontSize: 20,
+           color: Colors.grey,
+          ),
+        ),
+        const SizedBox(height: 4),
+        const Text(
+          "789 Sushi St, City",
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.grey,
+          ),
+        ),
+        const SizedBox(height: 6),
+        Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              decoration: BoxDecoration(
+                color: Color(0xffEEA734),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: const Text(
+                "4.7",
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const SizedBox(width: 6),
+            const Text(
+              "25 min",
+              style: TextStyle(fontSize: 12),
+            ),
+            const SizedBox(width: 4),
+            const Text(
+              "•",
+              style: TextStyle(fontSize: 12),
+            ),
+            const SizedBox(width: 4),
+            const Text(
+              "Free delivery",
+              style: TextStyle(fontSize: 12),
+            ),
+          ],
+        ),
+      ],
+    ),
+  ]
+  ),
+
+ const SizedBox(height: 20),
+
+  Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children:  [
+      Text(
+        "All Restaurants",
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Text(
+        "see all",
+        style: TextStyle(
+          fontSize: 16,
+          color: Color(0xffEEA734),
+        ),
+      ),
+
+    ]
+    ),
+
+     const SizedBox(height: 20),
+
+    Padding(
+  padding: EdgeInsets.symmetric(horizontal: 16.0), // Remove const
+  child: ClipRRect(
+    borderRadius: BorderRadius.circular(16),
+    child: Image.asset(
+      "assets/images/Dinner.png",
+      width: double.infinity,
+      height: 200,
+      fit: BoxFit.cover,
+    ),
+  ),
+)
     
             ],
         ),
