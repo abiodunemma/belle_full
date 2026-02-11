@@ -497,7 +497,7 @@ Row(
           "Cafe Brichor's",
           style: TextStyle(
             fontSize: 20,
-            color: Colors.grey,
+            
           ),
         ),
         SizedBox(height: 10),
@@ -506,29 +506,61 @@ Row(
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
 
-    
-    Text(
-      "Cafe Brichor's",
-      style: TextStyle(
-        fontSize: 20,
-        
-      ),
-    ),
-
-    SizedBox(height: 10),
-
- 
     Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text("Coffee"),
-        Text("Tea"),
-        Text("Snacks"),
-        Text("Dessert"),
+        Text(
+        "Chinese",
+        style: TextStyle(
+          fontSize: 15,
+          color: Color(0xff868686),
+          
+        ),
+      ),
+      SizedBox(width: 9),
+
+       const Text(
+              "•",
+              style: TextStyle(
+                fontSize: 12,
+                color: Color(0xff868686),
+                ),
+            ),
+
+         SizedBox(width: 9),
+
+       Text(
+        "American",
+        style: TextStyle(
+          fontSize: 15,
+          color: Color(0xff868686),
+          
+        ),
+      ),
+    SizedBox(width: 9),
+
+       const Text(
+              "•",
+              style: TextStyle(
+                fontSize: 12,
+                color: Color(0xff868686),
+                ),
+            ),
+
+         SizedBox(width: 9),
+     Text(
+        "Deshi food",
+        style: TextStyle(
+          fontSize: 15,
+          color: Color(0xff868686),
+          
+        ),
+      ),
+  
       ],
     ),
 
-    SizedBox(height: 10),
+    SizedBox(height: 30),
 
     // Third Line
     Text(
