@@ -507,6 +507,67 @@ Row(
   children: [
 
     Row(
+      
+      children: [
+        Text(
+        "Chinese",
+        style: TextStyle(
+          fontSize: 15,
+          color: Color(0xff868686),
+          
+        ),
+      ),
+      SizedBox(width: 9),
+
+       const Text(
+              "•",
+              style: TextStyle(
+                fontSize: 12,
+                color: Color(0xff868686),
+                ),
+            ),
+
+         SizedBox(width: 9),
+
+       Text(
+        "American",
+        style: TextStyle(
+          fontSize: 15,
+          color: Color(0xff868686),
+          
+        ),
+      ),
+    SizedBox(width: 9),
+
+       const Text(
+              "•",
+              style: TextStyle(
+                fontSize: 12,
+                color: Color(0xff868686),
+                ),
+            ),
+
+         SizedBox(width: 9),
+     Text(
+        "Deshi food",
+        style: TextStyle(
+          fontSize: 15,
+          color: Color(0xff868686),
+          
+        ),
+      ),
+  
+      ],
+    ),
+
+    SizedBox(height: 30),
+
+    // Third Line
+          Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+
+    Row(
       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
@@ -570,6 +631,8 @@ Row(
       ),
     ),
 
+  ],
+)
   ],
 )
 
