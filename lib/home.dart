@@ -450,6 +450,7 @@ Row(
   ),
 
  const SizedBox(height: 20),
+ 
 
   Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -475,18 +476,76 @@ Row(
      const SizedBox(height: 20),
 
     Padding(
-  padding: EdgeInsets.symmetric(horizontal: 16.0), // Remove const
+  padding: const EdgeInsets.symmetric(horizontal: 16.0), 
   child: ClipRRect(
     borderRadius: BorderRadius.circular(16),
     child: Image.asset(
-      "assets/images/Dinner.png",
+      "assets/images/dinner.png",
       width: double.infinity,
       height: 200,
       fit: BoxFit.cover,
     ),
   ),
-)
+),
+   
+    const SizedBox(height: 10),
+
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Cafe Brichor's",
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        ),
+        SizedBox(height: 10),
+
+        Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+
     
+    Text(
+      "Cafe Brichor's",
+      style: TextStyle(
+        fontSize: 20,
+        
+      ),
+    ),
+
+    SizedBox(height: 10),
+
+ 
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text("Coffee"),
+        Text("Tea"),
+        Text("Snacks"),
+        Text("Dessert"),
+      ],
+    ),
+
+    SizedBox(height: 10),
+
+    // Third Line
+    Text(
+      "Open: 8am - 10pm",
+      style: TextStyle(
+        color: Colors.grey,
+      ),
+    ),
+
+  ],
+)
+
+
+   
+      ],
+    )
+
             ],
         ),
       ),
