@@ -512,7 +512,7 @@ Row(
         Text(
         "Chinese",
         style: TextStyle(
-          fontSize: 15,
+          fontSize: 18,
           color: Color(0xff868686),
           
         ),
@@ -532,7 +532,7 @@ Row(
        Text(
         "American",
         style: TextStyle(
-          fontSize: 15,
+          fontSize: 18,
           color: Color(0xff868686),
           
         ),
@@ -551,7 +551,7 @@ Row(
      Text(
         "Deshi food",
         style: TextStyle(
-          fontSize: 15,
+          fontSize: 18,
           color: Color(0xff868686),
           
         ),
@@ -560,79 +560,103 @@ Row(
       ],
     ),
 
-    SizedBox(height: 30),
+    SizedBox(height: 10),
 
-    // Third Line
-          Column(
+
+Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
 
     Row(
-      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-        "Chinese",
-        style: TextStyle(
-          fontSize: 15,
-          color: Color(0xff868686),
-          
-        ),
-      ),
-      SizedBox(width: 9),
 
-       const Text(
-              "•",
-              style: TextStyle(
-                fontSize: 12,
-                color: Color(0xff868686),
-                ),
-            ),
-
-         SizedBox(width: 9),
-
-       Text(
-        "American",
-        style: TextStyle(
-          fontSize: 15,
-          color: Color(0xff868686),
-          
-        ),
-      ),
-    SizedBox(width: 9),
-
-       const Text(
-              "•",
-              style: TextStyle(
-                fontSize: 12,
-                color: Color(0xff868686),
-                ),
-            ),
-
-         SizedBox(width: 9),
-     Text(
-        "Deshi food",
-        style: TextStyle(
-          fontSize: 15,
-          color: Color(0xff868686),
-          
-        ),
-      ),
   
+        Row(
+          children: const [
+            Icon(Icons.star, color: Colors.orange, size: 18),
+            SizedBox(width: 4),
+            Text(
+              "4.3",
+              style: TextStyle(
+                fontSize: 14,
+                color: Color(0xff868686),
+              ),
+            ),
+          ],
+        ),
+
+        SizedBox(width: 15),
+
+     
+        Row(
+          children: const [
+            Icon(Icons.people, color: Colors.grey, size: 18),
+            SizedBox(width: 4),
+            Text(
+              "200+ Ratings",
+              style: TextStyle(
+                fontSize: 14,
+                color: Color(0xff868686),
+              ),
+            ),
+          ],
+        ),
+
+        SizedBox(width: 15),
+
+       
+        Row(
+          children: const [
+            Icon(Icons.access_time, color: Colors.grey, size: 18),
+            SizedBox(width: 4),
+            Text(
+              "25 Min",
+              style: TextStyle(
+                fontSize: 13,
+                color: Color(0xff868686),
+              ),
+            ),
+          ],
+        ),
+
+        SizedBox(width: 15),
+
+        
+        Row(
+          children: const [
+            Icon(Icons.attach_money, color: Colors.green, size: 18),
+            SizedBox(width: 2),
+            Text(
+              "Free",
+              style: TextStyle(
+                fontSize: 13,
+                color: Color(0xff868686),
+              ),
+            ),
+          ],
+        ),
       ],
     ),
 
     SizedBox(height: 30),
 
-    // Third Line
     Text(
       "Open: 8am - 10pm",
-      style: TextStyle(
-        color: Colors.grey,
-      ),
+      style: TextStyle(color: Colors.grey),
     ),
-
   ],
 )
+
+
+
+
+
+
+
+
+
+
+    
   ],
 )
 
