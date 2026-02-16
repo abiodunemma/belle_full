@@ -28,24 +28,41 @@ class _MainNavigationState extends State<MainNavigation> {
         index: _currentIndex,
         children: _pages,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.search), label: "Search"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.list), label: "Orders"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), label: "Profile"),
-        ],
-      ),
+ 
+
+          bottomNavigationBar: BottomNavigationBar(
+  currentIndex: _currentIndex,
+  onTap: (index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  },
+  type: BottomNavigationBarType.fixed,
+  selectedItemColor: const Color(0xffEEA734),
+  unselectedItemColor: Colors.grey,
+  selectedFontSize: 12,
+  unselectedFontSize: 12,
+  items: const [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: 'Home',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.search),
+      label: 'Search',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.shopping_bag),
+      label: 'Orders',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.person),
+      label: 'Profile',
+    ),
+  ],
+),
+
+        
     );
   }
 }

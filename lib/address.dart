@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 // import 'home.dart';
-import 'features/home/presentation/home_page.dart';
+// import 'features/home/presentation/home_page.dart';
+import 'navigation/main_navigation.dart';
+
 
 
 class AddressScreen extends StatefulWidget {
@@ -106,7 +108,7 @@ class _AddressScreenState extends State<AddressScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                        MaterialPageRoute(builder: (context) => MainNavigation()),
                       );
                     },
 
