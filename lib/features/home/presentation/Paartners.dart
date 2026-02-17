@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PartnersScreeen extends StatefulWidget {
-  const PartnersScreeen({super.key});
+class PaartnersScreeen extends StatefulWidget {
+  const PaartnersScreeen({super.key});
 
   @override
-  State<PartnersScreeen> createState() => _PartnersScreeenState();
+  State<PaartnersScreeen> createState() => _PaartnersScreeenState();
 }
 
-class _PartnersScreeenState extends State<PartnersScreeen> {
+class _PaartnersScreeenState extends State<PaartnersScreeen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

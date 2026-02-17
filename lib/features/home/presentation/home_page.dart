@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   
                 // ),
-                Row(
+                    Row(
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
   children: [
     const Text(
@@ -136,18 +136,24 @@ class _HomeScreenState extends State<HomeScreen> {
 
     InkWell(
       onTap: () {
-        print("See all clicked");
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Paartners(),
+          ),
+        );
       },
       child: const Text(
         "see all",
         style: TextStyle(
           fontSize: 16,
-          color: Color(0xffEEA734), // color makes it look like a link
+          color: Color(0xffEEA734),
         ),
       ),
     ),
   ],
 ),
+
 
 
                 const SizedBox(height: 10),
