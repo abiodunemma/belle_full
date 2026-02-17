@@ -11,7 +11,8 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -31,14 +32,35 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
                       ),
                     ),
                     const Text(
-                      "Featured Partners"
-                      
-                    )
+                      "Featured Partners",
+                      style: TextStyle(
+                        fontSize: 18,
+                         fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ],
+                  
                 ),
               ),
+             const  SizedBox(height: 10),
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    "assets/images/plate1.png",
+                    width: 150,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  ),
+                )
+              ],
+             )
+
             ],
           ),
+        ),
         ),
       ),
     );
