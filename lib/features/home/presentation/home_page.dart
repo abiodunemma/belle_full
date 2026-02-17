@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'Paartners.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -100,25 +101,54 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 const SizedBox(height: 20),
                  
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   // children: const [
+                //   //   Text(
+                //   //     "Featured Partners",
+                //   //     style: TextStyle(
+                //   //       fontSize: 18,
+                //   //       fontWeight: FontWeight.bold,
+                //   //     ),
+                //   //   ),
+                //   //   Text(
+                      
+                //   //     "see all",
+                //   //     style: TextStyle(
+                //   //       fontSize: 16,
+                //   //       color: Color(0xffEEA734),
+                //   //     ),
+                //   //   ),
+                //   // ],
+
+                  
+                // ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      "Featured Partners",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      "see all",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Color(0xffEEA734),
-                      ),
-                    ),
-                  ],
-                ),
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: [
+    const Text(
+      "Featured Partners",
+      style: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+
+    InkWell(
+      onTap: () {
+        print("See all clicked");
+      },
+      child: const Text(
+        "see all",
+        style: TextStyle(
+          fontSize: 16,
+          color: Color(0xffEEA734), // color makes it look like a link
+        ),
+      ),
+    ),
+  ],
+),
+
 
                 const SizedBox(height: 10),
 

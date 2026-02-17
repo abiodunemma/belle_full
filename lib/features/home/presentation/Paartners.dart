@@ -32,7 +32,7 @@ class _PartnersScreeenState extends State<PartnersScreeen> {
                     ),
                     const Text(
                       "Featured Partners"
-                      style: TextStyle(),
+                      
                     )
                   ],
                 ),
