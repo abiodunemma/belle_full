@@ -18,8 +18,6 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
-                /// 🔹 Header
                 SizedBox(
                   height: 56,
                   child: Stack(
@@ -44,17 +42,18 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
                     ],
                   ),
                 ),
-
                 const SizedBox(height: 20),
-
-                /// 🔹 Partners Row
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
                       child: buildPartnerCard(
                         image: "assets/images/plate1.png",
                         title: "Tacos Nanchas",
-                        subtitle: "Free delivery",
+                        subtitle: "Tacos & Mexican",
+                        timeLabel: "20 min",
+                        deliveryLabel: "Free",
+                        rating: null,
                       ),
                     ),
                     const SizedBox(width: 12),
@@ -62,8 +61,10 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
                       child: buildPartnerCard(
                         image: "assets/images/plate2.png",
                         title: "Mario Italiano",
-                        subtitle: "15 min • Pay",
-                        showRating: true,
+                        subtitle: "Italian & Pasta",
+                        timeLabel: "15 min",
+                        deliveryLabel: "Pay",
+                        rating: "4.8",
                       ),
                     ),
                   ],
@@ -76,71 +77,137 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
     );
   }
 
- 
   Widget buildPartnerCard({
     required String image,
     required String title,
     required String subtitle,
-    bool showRating = false,
+    required String timeLabel,
+    required String deliveryLabel,
+    String? rating,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // Image with overlay
         ClipRRect(
           borderRadius: BorderRadius.circular(12),
-          child: Image.asset(
-            image,
-            width: double.infinity, // important for responsiveness
-            height: 110,
-            fit: BoxFit.cover,
-          ),
-        ),
-        const SizedBox(height: 8),
-
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-
-        const SizedBox(height: 4),
-
-        if (showRating)
-          Row(
+          child: Stack(
             children: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-               
-                child: const Text(
-                  "4.8",
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
+              // Background image
+              Image.asset(
+                image,
+                width: double.infinity,
+                height: 160,
+                fit: BoxFit.cover,
+              ),
+              // Dark gradient at the bottom for readability
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: 0,
+                child: Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
+                      colors: [
+                        Colors.black.withOpacity(0.65),
+                        Colors.transparent,
+                      ],
+                    ),
                   ),
                 ),
               ),
-              const SizedBox(width: 6),
-              Expanded(
-                child: Text(
-                  subtitle,
-                  style: const TextStyle(fontSize: 12),
-                  overflow: TextOverflow.ellipsis,
+              // Bottom-left: time + delivery label
+              Positioned(
+                left: 8,
+                bottom: 8,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.access_time,
+                            color: Colors.white, size: 12),
+                        const SizedBox(width: 3),
+                        Text(
+                          timeLabel,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      deliveryLabel,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
                 ),
               ),
+              // Bottom-right: rating box (only if provided)
+              if (rating != null)
+                Positioned(
+                  right: 8,
+                  bottom: 8,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 7, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(Icons.star,
+                            color: Colors.white, size: 11),
+                        const SizedBox(width: 3),
+                        Text(
+                          rating,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
             ],
-          )
-        else
-          Text(
-            subtitle,
-            style: const TextStyle(
-              fontSize: 12,
-              color: Colors.grey,
-            ),
           ),
+        ),
+        const SizedBox(height: 8),
+        // Title
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
+          ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
+        const SizedBox(height: 3),
+        // Subtitle
+        Text(
+          subtitle,
+          style: const TextStyle(
+            fontSize: 12,
+            color: Colors.grey,
+          ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
       ],
     );
   }
