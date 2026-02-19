@@ -208,6 +208,8 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
+
+        
       ],
     );
   }
