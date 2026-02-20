@@ -33,7 +33,7 @@ class _kitchenState extends State<kitchen> {
                     height: 240,
                     width: double.infinity,
                     child: Image.asset(
-                      'assets/images/plate1.png',
+                      'assets/images/cake.png',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -66,7 +66,7 @@ class _kitchenState extends State<kitchen> {
                                 ),
                                 IconButton(
                                   onPressed: () {},
-                                  icon: const Icon(Icons.bookmark_border,
+                                  icon: const Icon(Icons.search,
                                       color: Colors.white),
                                 ),
                               ],
