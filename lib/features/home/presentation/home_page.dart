@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'Paartners.dart';
 
@@ -10,13 +9,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
+  Future<void> _onRefresh() async {
+    await Future.delayed(const Duration(seconds: 4));
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(  
+        child: RefreshIndicator(
+           onRefresh: _onRefresh, 
+           color: Colors.orange, 
+           
+        child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
@@ -53,24 +59,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         const Text(
                           "HayStreet, Perth",
-                          style: TextStyle(
-                            fontSize: 22,
-                          ),
+                          style: TextStyle(fontSize: 22),
                         ),
                         const SizedBox(width: 4),
-                        const Icon(
-                          Icons.keyboard_arrow_down,
-                          size: 24,
-                        ),
+                        const Icon(Icons.keyboard_arrow_down, size: 24),
                       ],
                     ),
                     Align(
                       alignment: Alignment.centerRight,
                       child: const Text(
                         "Filter",
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
+                        style: TextStyle(fontSize: 16),
                       ),
                     ),
                   ],
@@ -78,10 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Column(
                   children: [
                     const SizedBox(height: 10),
-                    const Divider(
-                      color: Colors.grey,
-                      thickness: 1,
-                    ),
+                    const Divider(color: Colors.grey, thickness: 1),
                     const SizedBox(height: 16),
                   ],
                 ),
@@ -96,11 +92,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 200,
                       fit: BoxFit.cover,
                     ),
-                  )
+                  ),
                 ),
 
                 const SizedBox(height: 20),
-                 
+
                 // Row(
                 //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 //   // children: const [
@@ -112,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 //   //     ),
                 //   //   ),
                 //   //   Text(
-                      
+
                 //   //     "see all",
                 //   //     style: TextStyle(
                 //   //       fontSize: 16,
@@ -121,40 +117,37 @@ class _HomeScreenState extends State<HomeScreen> {
                 //   //   ),
                 //   // ],
 
-                  
                 // ),
-                    Row(
-  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  children: [
-    const Text(
-      "Featured Partners",
-      style: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Featured Partners",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
 
-    InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const PaartnersScreeen(),
-          ),
-        );
-      },
-      child: const Text(
-        "see all",
-        style: TextStyle(
-          fontSize: 16,
-          color: Color(0xffEEA734),
-        ),
-      ),
-    ),
-  ],
-),
-
-
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PaartnersScreeen(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        "see all",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Color(0xffEEA734),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
 
                 const SizedBox(height: 10),
 
@@ -184,16 +177,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 4),
                         const Text(
                           "123 Street Name, City",
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey,
-                          ),
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                         const SizedBox(height: 6),
                         Row(
                           children: [
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
                               decoration: BoxDecoration(
                                 color: Color(0xffEEA734),
                                 borderRadius: BorderRadius.circular(6),
@@ -213,10 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(fontSize: 12),
                             ),
                             const SizedBox(width: 4),
-                            const Text(
-                              "•",
-                              style: TextStyle(fontSize: 12),
-                            ),
+                            const Text("•", style: TextStyle(fontSize: 12)),
                             const SizedBox(width: 4),
                             const Text(
                               "Free delivery",
@@ -226,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    
+
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -250,16 +240,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 4),
                         const Text(
                           "456 Another St, City",
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey,
-                          ),
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                         const SizedBox(height: 6),
                         Row(
                           children: [
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
                               decoration: BoxDecoration(
                                 color: Color(0xffEEA734),
                                 borderRadius: BorderRadius.circular(6),
@@ -279,15 +269,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(fontSize: 12),
                             ),
                             const SizedBox(width: 4),
-                            const Text(
-                              "•",
-                              style: TextStyle(fontSize: 12),
-                            ),
+                            const Text("•", style: TextStyle(fontSize: 12)),
                             const SizedBox(width: 4),
-                            const Text(
-                              "pay",
-                              style: TextStyle(fontSize: 12),
-                            ),
+                            const Text("pay", style: TextStyle(fontSize: 12)),
                           ],
                         ),
                       ],
@@ -367,24 +351,21 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 8),
                         const Text(
                           "McDonald's",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.grey,
-                          ),
+                          style: TextStyle(fontSize: 20, color: Colors.grey),
                         ),
                         const SizedBox(height: 4),
                         const Text(
                           "Hay street , Perth City",
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey,
-                          ),
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                         const SizedBox(height: 6),
                         Row(
                           children: [
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
                               decoration: BoxDecoration(
                                 color: Color(0xffEEA734),
                                 borderRadius: BorderRadius.circular(6),
@@ -404,10 +385,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(fontSize: 12),
                             ),
                             const SizedBox(width: 4),
-                            const Text(
-                              "•",
-                              style: TextStyle(fontSize: 12),
-                            ),
+                            const Text("•", style: TextStyle(fontSize: 12)),
                             const SizedBox(width: 4),
                             const Text(
                               "Free delivery",
@@ -433,24 +411,21 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 8),
                         const Text(
                           "Sushi Place",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.grey,
-                          ),
+                          style: TextStyle(fontSize: 20, color: Colors.grey),
                         ),
                         const SizedBox(height: 4),
                         const Text(
                           "789 Sushi St, City",
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey,
-                          ),
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
                         ),
                         const SizedBox(height: 6),
                         Row(
                           children: [
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 8,
+                                vertical: 4,
+                              ),
                               decoration: BoxDecoration(
                                 color: Color(0xffEEA734),
                                 borderRadius: BorderRadius.circular(6),
@@ -470,10 +445,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(fontSize: 12),
                             ),
                             const SizedBox(width: 4),
-                            const Text(
-                              "•",
-                              style: TextStyle(fontSize: 12),
-                            ),
+                            const Text("•", style: TextStyle(fontSize: 12)),
                             const SizedBox(width: 4),
                             const Text(
                               "Free delivery",
@@ -483,7 +455,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                  ]
+                  ],
                 ),
 
                 const SizedBox(height: 20),
@@ -500,18 +472,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Text(
                       "see all",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Color(0xffEEA734),
-                      ),
+                      style: TextStyle(fontSize: 16, color: Color(0xffEEA734)),
                     ),
-                  ]
+                  ],
                 ),
 
                 const SizedBox(height: 20),
 
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0), 
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: Image.asset(
@@ -522,18 +491,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                
+
                 const SizedBox(height: 10),
 
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Cafe Brichor's",
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
-                    ),
+                    Text("Cafe Brichor's", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 10),
 
                     Column(
@@ -592,7 +556,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 Row(
                                   children: const [
-                                    Icon(Icons.star, color: Colors.orange, size: 18),
+                                    Icon(
+                                      Icons.star,
+                                      color: Colors.orange,
+                                      size: 18,
+                                    ),
                                     SizedBox(width: 4),
                                     Text(
                                       "4.3",
@@ -608,7 +576,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                 Row(
                                   children: const [
-                                    Icon(Icons.people, color: Colors.grey, size: 18),
+                                    Icon(
+                                      Icons.people,
+                                      color: Colors.grey,
+                                      size: 18,
+                                    ),
                                     SizedBox(width: 4),
                                     Text(
                                       "200+ Ratings",
@@ -624,7 +596,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                 Row(
                                   children: const [
-                                    Icon(Icons.access_time, color: Colors.grey, size: 18),
+                                    Icon(
+                                      Icons.access_time,
+                                      color: Colors.grey,
+                                      size: 18,
+                                    ),
                                     SizedBox(width: 4),
                                     Text(
                                       "25 Min",
@@ -640,7 +616,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                 Row(
                                   children: const [
-                                    Icon(Icons.attach_money, color: Colors.green, size: 18),
+                                    Icon(
+                                      Icons.attach_money,
+                                      color: Colors.green,
+                                      size: 18,
+                                    ),
                                     SizedBox(width: 2),
                                     Text(
                                       "Free",
@@ -661,17 +641,18 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: TextStyle(color: Colors.grey),
                             ),
                           ],
-                        )
+                        ),
                       ],
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
+
         ),
       ),
-      // 
+      ),
     );
   }
 }
