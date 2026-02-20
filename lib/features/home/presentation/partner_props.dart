@@ -18,7 +18,7 @@ class PartnerProps {
 
 final List<PartnerProps> partnersList = [
   const PartnerProps(
-    image: 'assets/images/plate.png',
+    image: 'assets/images/plate1.png',
     title: 'Tacos Nanchas',
     subtitle: 'Tacos & Mexican',
     timeLabel: '20 min',
@@ -41,7 +41,31 @@ final List<PartnerProps> partnersList = [
     rating: '4.5',
   ),
   const PartnerProps(
-    image: 'assets/images/tea.png',
+    image: 'assets/images/tea1.png',
+    title: 'Sushi Zen',
+    subtitle: 'Japanese & Sushi',
+    timeLabel: '25 min',
+    deliveryLabel: 'Pay',
+    rating: '4.9',
+  ),
+   const PartnerProps(
+    image: 'assets/images/tea2.png',
+    title: 'Sushi Zen',
+    subtitle: 'Japanese & Sushi',
+    timeLabel: '25 min',
+    deliveryLabel: 'Pay',
+    rating: '4.9',
+  ),
+   const PartnerProps(
+    image: 'assets/images/teaplate1.png',
+    title: 'Sushi Zen',
+    subtitle: 'Japanese & Sushi',
+    timeLabel: '25 min',
+    deliveryLabel: 'Pay',
+    rating: '4.9',
+  ),
+   const PartnerProps(
+    image: 'assets/images/tea1.png',
     title: 'Sushi Zen',
     subtitle: 'Japanese & Sushi',
     timeLabel: '25 min',

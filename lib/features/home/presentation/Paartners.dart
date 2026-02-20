@@ -282,6 +282,26 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
                   ],
                 ),
 
+                  // Row 2
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: PartnerCard(props: partnersList[0])),
+                    const SizedBox(width: 12),
+                    Expanded(child: PartnerCard(props: partnersList[1])),
+                  ],
+                ),
+
+                  // Row 2
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: PartnerCard(props: partnersList[2])),
+                    const SizedBox(width: 12),
+                    Expanded(child: PartnerCard(props: partnersList[3])),
+                  ],
+                ),
+
               ],
             ),
           ),
