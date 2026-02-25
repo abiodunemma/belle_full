@@ -86,17 +86,48 @@ class _kitchenState extends State<kitchen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Kitchen Name",
+                      "Mayfield Bakery & Cafe",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     SizedBox(height: 8),
-                    Text(
-                      "Subtitle or description here",
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:
+                     [
+                      Column(
+                        children: const [
+                          Icon(Icons.attach_money_rounded, color: Colors.grey),
+                          
+                        ],
+                      ),
+                      Column(
+                        children:[
+                         const  Text("Free Delivery",
+                         style: TextStyle(color: Colors.grey, fontSize: 15),
+                         )
+                        ]
+                      ),
+
+                        Column(
+                        children: [
+                         const Text("American",
+                          style: TextStyle(color: Colors.grey, fontSize: 15),
+                          )
+                        ],
+                      ),
+
+                        Column(
+                        children: [
+                         const Text("Desserts",
+                          style: TextStyle(color: Colors.grey, fontSize: 15),
+                          )
+                        ],
+                      ),
+                     ],
+                     )
                   ],
                 ),
               ),
