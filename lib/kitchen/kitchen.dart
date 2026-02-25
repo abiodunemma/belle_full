@@ -28,7 +28,6 @@ class _kitchenState extends State<kitchen> {
               // ── Hero image + icons ─────────────────────
               Stack(
                 children: [
-                  // Background image
                   SizedBox(
                     height: 240,
                     width: double.infinity,
@@ -37,8 +36,6 @@ class _kitchenState extends State<kitchen> {
                       fit: BoxFit.cover,
                     ),
                   ),
-
-                  // Icons on top of image
                   Positioned(
                     top: 0,
                     left: 0,
@@ -49,14 +46,11 @@ class _kitchenState extends State<kitchen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            // Back button (left)
                             IconButton(
                               onPressed: () => Navigator.pop(context),
                               icon: const Icon(Icons.arrow_back_ios,
                                   color: Colors.white),
                             ),
-
-                            // Share + Bookmark (right)
                             Row(
                               children: [
                                 IconButton(
@@ -79,83 +73,102 @@ class _kitchenState extends State<kitchen> {
                 ],
               ),
 
-              // ── Rest of your page content goes here ───
-              const Padding(
-                padding: EdgeInsets.all(16.0),
+              // ── Rest of page content ───────────────────
+              Padding(                          // ← removed const
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Mayfield Bakery & Cafe",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 8),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children:
-                     [
-                      Column(
-                        children: const [
-                          Icon(Icons.attach_money_rounded, color: Colors.grey),
-                          
-                        ],
-                      ),
+                    const SizedBox(height: 8),
 
-                      SizedBox(width: 9),
-                              const Text(
-                                "•",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Color(0xff868686),
-                                ),
+                    const Row(
+                      children: [
+                        Icon(Icons.attach_money_rounded,
+                            color: Colors.grey, size: 18),
+                        SizedBox(width: 6),
+                        Text("Free Delivery",
+                            style: TextStyle(color: Colors.grey, fontSize: 15)),
+                        SizedBox(width: 8),
+                        Text("•",
+                            style: TextStyle(color: Color(0xff868686))),
+                        SizedBox(width: 8),
+                        Text("American",
+                            style: TextStyle(color: Colors.grey, fontSize: 15)),
+                        SizedBox(width: 8),
+                        Text("•",
+                            style: TextStyle(color: Color(0xff868686))),
+                        SizedBox(width: 8),
+                        Text("Desserts",
+                            style: TextStyle(color: Colors.grey, fontSize: 15)),
+                      ],
+                    ),
+
+                    const SizedBox(height: 16),
+
+                    Row(                        // ← removed const
+                      children: [
+                        const CircleAvatar(
+                          radius: 14,
+                          backgroundColor: Colors.orange,
+                          child: Icon(Icons.attach_money_outlined,
+                              color: Colors.white, size: 16),
+                        ),
+                        const SizedBox(width: 6),
+                        const Text("Free Delivery",
+                            style: TextStyle(color: Colors.grey, fontSize: 16)),
+                        const SizedBox(width: 16),
+                        const CircleAvatar(
+                          radius: 14,
+                          backgroundColor: Colors.orange,
+                          child: Icon(Icons.punch_clock,
+                              color: Colors.white, size: 16),
+                        ),
+                        const SizedBox(width: 6),
+                        const Text("25 minutes",
+                            style: TextStyle(color: Colors.grey, fontSize: 16)),
+                        const SizedBox(width: 6),
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              elevation: 0,
+                              side: const BorderSide(
+                                color: Color(0xffEEA734),
+                                width: 1.5,
                               ),
-
-                      Column(
-                        children:[
-                         const  Text("Free Delivery",
-                         style: TextStyle(color: Colors.grey, fontSize: 15),
-                         )
-                        ]
-                      ),
-
-                       SizedBox(width: 9),
-                              const Text(
-                                "•",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Color(0xff868686),
-                                ),
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
                               ),
-
-                        Column(
-                        children: [
-                         const Text("American",
-                          style: TextStyle(color: Colors.grey, fontSize: 15),
-                          )
-                        ],
-                      ),
-
-                      SizedBox(width: 9),
-                              const Text(
-                                "•",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Color(0xff868686),
+                            ),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.my_location,
+                                    color: Color(0xffEEA734)),
+                                SizedBox(width: 8),
+                                Text(
+                                  "Set Location",
+                                  style: TextStyle(
+                                    color: Color(0xffEEA734),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14,
+                                  ),
                                 ),
-                              ),
-
-                        Column(
-                        children: [
-                         const Text("Desserts",
-                          style: TextStyle(color: Colors.grey, fontSize: 15),
-                          )
-                        ],
-                      ),
-                     ],
-                     )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
