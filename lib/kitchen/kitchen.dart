@@ -38,7 +38,7 @@ class _kitchenState extends State<kitchen> {
                   ),
                   Positioned(
                     top: 0,
-                    left: 0,
+                    left: 1.6,
                     right: 0,
                     child: SafeArea(
                       child: Padding(
@@ -74,7 +74,7 @@ class _kitchenState extends State<kitchen> {
               ),
 
               // ── Rest of page content ───────────────────
-              Padding(                          // ← removed const
+              Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,67 +112,61 @@ class _kitchenState extends State<kitchen> {
 
                     const SizedBox(height: 16),
 
-                    Row(                        // ← removed const
-                      children: [
-                        const CircleAvatar(
-                          radius: 14,
-                          backgroundColor: Colors.orange,
-                          child: Icon(Icons.attach_money_outlined,
-                              color: Colors.white, size: 16),
-                        ),
-                        const SizedBox(width: 6),
-                        const Text("Free Delivery",
-                            style: TextStyle(color: Colors.grey, fontSize: 16)),
-                        const SizedBox(width: 16),
-                        const CircleAvatar(
-                          radius: 14,
-                          backgroundColor: Colors.orange,
-                          child: Icon(Icons.punch_clock,
-                              color: Colors.white, size: 16),
-                        ),
-                        const SizedBox(width: 6),
-                        const Text("25 minutes",
-                            style: TextStyle(color: Colors.grey, fontSize: 16)),
-                        const SizedBox(width: 6),
-                        Expanded(
-                          child: ElevatedButton(
+                    // ── Info + button wrapped in horizontal scroll ──
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          const CircleAvatar(
+                            radius: 14,
+                            backgroundColor: Colors.orange,
+                            child: Icon(Icons.attach_money_outlined,
+                                color: Colors.white, size: 16),
+                          ),
+                          const SizedBox(width: 6),
+                          const Text("Free Delivery",
+                              style: TextStyle(color: Colors.grey, fontSize: 16)),
+                          const SizedBox(width: 16),
+                          const CircleAvatar(
+                            radius: 14,
+                            backgroundColor: Colors.orange,
+                            child: Icon(Icons.punch_clock,
+                                color: Colors.white, size: 16),
+                          ),
+                          const SizedBox(width: 6),
+                          const Text("25 minutes",
+                              style: TextStyle(color: Colors.grey, fontSize: 16)),
+                          const SizedBox(width: 12),
+                          ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
                               elevation: 0,
                               side: const BorderSide(
                                 color: Color(0xffEEA734),
-                                width: 1.5,
+                                width: 1,
                               ),
-                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 9, horizontal: 16),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
                             ),
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Icons.my_location,
-                                    color: Color(0xffEEA734)),
-                                SizedBox(width: 8),
-                                Text(
-                                  "Set Location",
-                                  style: TextStyle(
-                                    color: Color(0xffEEA734),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ],
+                            child: const Text(
+                              "Take away",
+                              style: TextStyle(
+                                color: Color(0xffEEA734),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
-
             ],
           ),
         ),
