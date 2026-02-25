@@ -103,6 +103,16 @@ class _kitchenState extends State<kitchen> {
                           
                         ],
                       ),
+
+                      SizedBox(width: 9),
+                              const Text(
+                                "•",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Color(0xff868686),
+                                ),
+                              ),
+
                       Column(
                         children:[
                          const  Text("Free Delivery",
@@ -111,6 +121,15 @@ class _kitchenState extends State<kitchen> {
                         ]
                       ),
 
+                       SizedBox(width: 9),
+                              const Text(
+                                "•",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Color(0xff868686),
+                                ),
+                              ),
+
                         Column(
                         children: [
                          const Text("American",
@@ -118,6 +137,15 @@ class _kitchenState extends State<kitchen> {
                           )
                         ],
                       ),
+
+                      SizedBox(width: 9),
+                              const Text(
+                                "•",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Color(0xff868686),
+                                ),
+                              ),
 
                         Column(
                         children: [
