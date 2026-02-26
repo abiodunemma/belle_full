@@ -32,13 +32,7 @@ class KitchenCard extends StatelessWidget {
             style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
             maxLines: 1, overflow: TextOverflow.ellipsis),
         const SizedBox(height: 3),
-        // Text(props.amount,
-        //     style: const TextStyle(fontSize: 12, color: Colors.grey),
-        //     maxLines: 1, overflow: TextOverflow.ellipsis),
-        //      const SizedBox(height: 3),
-        //       Text(props.description,
-        //     style: const TextStyle(fontSize: 12, color: Colors.grey),
-        //     maxLines: 1, overflow: TextOverflow.ellipsis),
+       
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -59,7 +53,8 @@ class KitchenCard extends StatelessWidget {
                 style: const TextStyle(fontSize: 12, color: Colors.grey),
                 maxLines: 1, overflow: TextOverflow.ellipsis),
           ]
-        )
+        ),
+       
       ],
     );
   }

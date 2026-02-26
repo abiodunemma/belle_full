@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Kitchen_props.dart';
 import 'Kitchen_card.dart';
+import 'cake_card.dart';
 
 class kitchen extends StatefulWidget {
   const kitchen({super.key});
@@ -173,9 +174,70 @@ class _kitchenState extends State<kitchen> {
     ],
   ),
 ),
+ const SizedBox(height: 8),
+   SingleChildScrollView(
+  scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const Text(
+                                "Beef & Lamb",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff868686),
+                                ),
+                              ),
+                               SizedBox(width: 18),
+                              const Text(
+                                "Seafood",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff868686),
+                                ),
+                              ),
+                               SizedBox(width: 18),
+                              const Text(
+                                "Dim Sum",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff868686),
+                                ),
+                              ),
+                              SizedBox(width: 18),
+                              const Text(
+                                "Appetizers",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff868686),
+                                ),
+                              ),
+                              
+          ],
+        ),
+        ),
+        const SizedBox(height: 8),
+         CakeCard(props: kitchenList[1]),
+         const Divider(
+  color: Color.fromARGB(255, 237, 231, 231),
+  thickness: 1,
+  height: 16,
+),
+           const SizedBox(height: 8),
+           CakeCard(props: kitchenList[2]),
+
+           const Divider(
+  color: Color.fromARGB(255, 228, 222, 222),
+  thickness: 1,
+  height: 16,
+),
                 ],
               ),
             ),
+            
           ],
         ),
       ),
