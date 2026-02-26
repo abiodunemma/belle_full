@@ -94,7 +94,7 @@ const SizedBox(height: 40),
 Center(
   child: Image.asset(
     "assets/images/onbaording1.png",
-    height: 250, // adjust as needed
+    height: 250, 
     fit: BoxFit.contain,
   ),
 ),
