@@ -148,14 +148,31 @@ class _kitchenState extends State<kitchen> {
                 
                   const SizedBox(height: 16),
 
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(child: KitchenCard(props: kitchenList[1])),
-                      const SizedBox(width: 12),
-                      Expanded(child: KitchenCard(props: kitchenList[2])),
-                    ],
-                  ),
+                  // Row(
+                  //   crossAxisAlignment: CrossAxisAlignment.start,
+                  //   children: [
+                  //     Expanded(child: KitchenCard(props: kitchenList[1])),
+                  //     const SizedBox(width: 12),
+                  //     Expanded(child: KitchenCard(props: kitchenList[2])),
+                  //   ],
+                  // ),
+                  SingleChildScrollView(
+  scrollDirection: Axis.horizontal,
+  child: Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      SizedBox(width: 200, child: KitchenCard(props: kitchenList[1])),
+      const SizedBox(width: 12),
+      SizedBox(width: 200, child: KitchenCard(props: kitchenList[2])),
+       const SizedBox(width: 12),
+      SizedBox(width: 200, child: KitchenCard(props: kitchenList[3])),
+       const SizedBox(width: 12),
+      SizedBox(width: 200, child: KitchenCard(props: kitchenList[4])),
+       const SizedBox(width: 12),
+      SizedBox(width: 200, child: KitchenCard(props: kitchenList[5])),
+    ],
+  ),
+),
                 ],
               ),
             ),
