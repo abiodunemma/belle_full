@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../kitchen/kitchen.dart';
 import 'Paartners.dart';
 
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -178,21 +179,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               );
                             },
-                            child: const Text(
-                              "Kitchen Name",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                            // child: const Text(
+                            //   "Kitchen Name",
+                            //   style: TextStyle(
+                            //     fontSize: 16,
+                            //     fontWeight: FontWeight.bold,
+                            //   ),
+                            // ),
+                            
+                            
                           ),
-                          // const Text(
-                          //   "Kitchen Name",
-                          //   style: TextStyle(
-                          //     fontSize: 16,
-                          //     fontWeight: FontWeight.bold,
-                          //   ),
-                          // ),
+                          
                           const SizedBox(height: 4),
                           const Text(
                             "123 Street Name, City",

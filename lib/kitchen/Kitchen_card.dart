@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Kitchen_props.dart';
+import 'package:pratice/features/orders/presentation/Addorder_page.dart';
 
 class KitchenCard extends StatelessWidget {
   final KitchenProps props;
@@ -28,9 +29,29 @@ class KitchenCard extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
-        Text(props.name,
-            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-            maxLines: 1, overflow: TextOverflow.ellipsis),
+        // Text(props.name,
+        //     style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+        //     maxLines: 1, overflow: TextOverflow.ellipsis),
+        InkWell(
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const AddorderPage(),
+      ),
+    );
+  },
+  child: Text(
+    props.name,
+    style: const TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w700,
+      
+    ),
+    maxLines: 1,
+    overflow: TextOverflow.ellipsis,
+  ),
+),
         const SizedBox(height: 3),
        
         Row(

@@ -23,9 +23,9 @@ class _PaartnersScreeenState extends State<PaartnersScreeen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: RefreshIndicator(        // <-- wraps the scroll view
-          onRefresh: _onRefresh,        // <-- what happens on refresh
-          color: Colors.orange,         // <-- spinner color
+        child: RefreshIndicator(        
+          onRefresh: _onRefresh,        
+          color: Colors.orange,         
           child: SingleChildScrollView(
             physics: const AlwaysScrollableScrollPhysics(), // needed for refresh to trigger even when content is short
             child: Padding(
