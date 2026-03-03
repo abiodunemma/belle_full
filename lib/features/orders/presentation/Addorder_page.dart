@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'delivery_option.dart';
 
 class AddorderPage extends StatefulWidget {
   const AddorderPage({super.key});
@@ -8,9 +9,11 @@ class AddorderPage extends StatefulWidget {
 }
 
 class _AddorderPageState extends State<AddorderPage> {
+   int _quantity = 1;
   Future<void> _onRefresh() async {
     await Future.delayed(const Duration(seconds: 2));
     setState(() {});
+   
   }
 
   @override
@@ -89,10 +92,68 @@ const Row(
       child: Text("Button", style: TextStyle(color: Colors.white),
       ),
     ),
-    
+
   ],
 ),
+const DeliveryOptionScreen(),
 
+
+Center(
+child:Row(
+  mainAxisSize: MainAxisSize.min,
+
+  children: [
+    GestureDetector(
+      onTap: () {
+        if (_quantity > 1) setState(() => _quantity--);
+      },
+      child: Container(
+        
+        width: 36,
+        height: 36,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(color:  const Color.fromARGB(255, 198, 195, 195), width: 1.5),
+        ),
+        child: const Icon(Icons.remove, size: 18, color: Colors.grey),
+      ),
+    ),
+    Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Text(
+        "0$_quantity",
+        style: const TextStyle(fontSize: 18),
+      ),
+    ),
+    GestureDetector(
+      onTap: () => setState(() => _quantity++),
+      child: Container(
+        width: 36,
+        height: 36,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(color:  const Color.fromARGB(255, 198, 195, 195), width: 1.5),
+        ),
+        child: const Icon(Icons.add, size: 18, color: Colors.grey),
+      ),
+    ),
+  ],
+),
+),
+
+ const SizedBox(height: 20),
+
+ElevatedButton(
+  onPressed: () {},
+  style: ElevatedButton.styleFrom(
+    minimumSize: Size(double.infinity, 40),
+    backgroundColor: Colors.orange,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(8),
+    ),
+  ),
+
+                  child: Text("ADD TO ORDER (\$12.99)", style:  TextStyle(color: Colors.white),))   
                   ],
                 ),
                 ),
