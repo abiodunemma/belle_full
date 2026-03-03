@@ -23,10 +23,10 @@ class _HomeScreenState extends State<HomeScreen> {
         child: RefreshIndicator(
           onRefresh: _onRefresh,
           color: Colors.orange,
-
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
+             
               child: Column(
                 children: [
                   SizedBox(
@@ -52,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
+                    
                   ),
                   Stack(
                     alignment: Alignment.center,
@@ -179,13 +180,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               );
                             },
-                            // child: const Text(
-                            //   "Kitchen Name",
-                            //   style: TextStyle(
-                            //     fontSize: 16,
-                            //     fontWeight: FontWeight.bold,
-                            //   ),
-                            // ),
+                            child: const Text(
+                              "Kitchen Name",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             
                             
                           ),
