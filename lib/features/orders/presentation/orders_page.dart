@@ -9,7 +9,7 @@ class OrdersPage extends StatefulWidget {
 
 class _OrdersPageState extends State<OrdersPage> {
   Future<void> _onRefresh() async {
-    await Future.delayed(const Duration(seconds: 4));
+    await Future.delayed(const Duration(seconds: 2));
     setState(() {});
   }
 
@@ -21,6 +21,7 @@ class _OrdersPageState extends State<OrdersPage> {
           onRefresh: _onRefresh,
           color: Colors.orange,
           child: SingleChildScrollView(
+            physics: const AlwaysScrollableScrollPhysics(), 
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
