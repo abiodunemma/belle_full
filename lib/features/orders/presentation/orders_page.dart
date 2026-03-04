@@ -161,7 +161,7 @@ const SizedBox(height: 16),
 const SizedBox(height: 16),
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                       
                           children: [
  Text(
   "Subtotal",
@@ -201,10 +201,83 @@ const SizedBox(height: 16),
     fontSize: 15,
   ),
  ),
+
                           ]
                           ),
 
+ const SizedBox(height: 12),
 
+                           Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      
+                          children: [
+ Text(
+  "Total",
+  style: TextStyle(
+    fontSize: 15,
+  ),
+ ),
+
+ Text(
+  "\$30",
+  style: TextStyle(
+    fontSize: 15,
+    color: Colors.orange,
+  ),
+ ),
+                          ]
+                          ),
+
+  const SizedBox(height: 36),
+
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: const [
+    Text(
+      'Add more items',
+      style: TextStyle(fontSize: 15, color: Colors.orange),
+    ),
+    IconButton(onPressed: null
+    , icon: Icon(Icons.arrow_forward_ios, size: 20))
+  ],
+),
+const Divider(
+  color: Color.fromARGB(255, 214, 213, 213),
+  thickness: 1,
+  height: 22,        // spacing above and below the line
+),
+
+
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  children: const [
+    Text(
+      'Promo Code',
+      style: TextStyle(fontSize: 15),
+    ),
+     IconButton(onPressed: null
+    , icon: Icon(Icons.arrow_forward_ios, size: 20))
+  ],
+),
+const Divider(
+  color: Color.fromARGB(255, 214, 213, 213),
+  thickness: 1,
+  height: 22,        // spacing above and below the line
+),
+
+const SizedBox(height: 12),
+                  
+ElevatedButton(
+  onPressed: () {},
+  style: ElevatedButton.styleFrom(
+    minimumSize: Size(double.infinity, 40),
+    backgroundColor: Colors.orange,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(8),
+    ),
+  ),
+
+                  child: Text(" CONTINUE (\$12.99)", style:  TextStyle(color: Colors.white),))   
 
               ]
               ),
