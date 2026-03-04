@@ -26,11 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-             
               child: Column(
                 children: [
                   SizedBox(
                     height: 56,
+                    
                     child: Stack(
                       alignment: Alignment.center,
                       children: [
