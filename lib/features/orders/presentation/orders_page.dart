@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'payment_page.dart';
 
 class OrdersPage extends StatefulWidget {
   const OrdersPage({super.key});
@@ -269,7 +270,9 @@ const Divider(
 const SizedBox(height: 12),
                   
 ElevatedButton(
-  onPressed: () {},
+  onPressed: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const PaymentPage()));
+  },
   style: ElevatedButton.styleFrom(
     minimumSize: Size(double.infinity, 40),
     backgroundColor: Colors.orange,
